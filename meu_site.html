@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wilson-Dev</title>
+    <style>
+        /* Estilos para a página */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: powderblue;
+        }
+
+        /* Estilos para o conteúdo principal */
+        .content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        /* Estilos para o rodapé */
+        .footer {
+            background-color: #000;
+            color: green;
+            padding: 5px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Estilos para o seletor de idioma */
+        .language-selector {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            color: green;
+        }
+
+        /* Estilos para as opções de idioma */
+        .language-selector a {
+            color: green;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /* Estilos para o título */
+        h1 {
+            text-align: center;
+        }
+
+        /* Estilos para a marca do LinkedIn (opcional) */
+        .linkedin-badge {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>*Wilson_Dev*</h1>
+    
+    <!-- Marca do LinkedIn (opcional) -->
+    <div class="linkedin-badge">
+        <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="wilson-jerônimo" data-version="v1">
+            <a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/wilson-jer%C3%B4nimo-530a31115?trk=profile-badge">Wilson Jerônimo</a>
+        </div>
+    </div>
+        
+    <p id="content">Bem-vindo ao meu site, ainda está em construção. Obrigado pela visita!</p>
+
+    <!-- Seletor de Idioma -->
+    <div class="language-selector">
+        <a href="#" onclick="changeLanguage('pt-br')">🇧🇷 PT</a>
+        <a href="#" onclick="changeLanguage('en')">🇺🇸 EN</a>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p id="date" style="margin: 0 10px; display: inline-block;"></p>
+        <span>|</span>
+        <p id="clock" style="margin: 0 10px; display: inline-block;"></p>
+    </div>
+
+    <!-- Script para o relógio, data e idioma -->
+    <script>
+        // Função para atualizar a data e hora
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('date').textContent = now.toLocaleDateString();
+            document.getElementById('clock').textContent = now.toLocaleTimeString();
+        }
+
+        // Atualize a hora a cada segundo
+        setInterval(updateTime, 1000);
+
+        // Traduções
+        const translations = {
+            'pt-br': {
+                content: 'Bem-vindo ao meu site, ainda está em construção. Obrigado pela visita!'
+            },
+            'en': {
+                content: 'Welcome to my website, it is still under construction. Thank you for visiting!'
+            }
+        };
+
+        // Função para mudar o idioma
+        function changeLanguage(language) {
+            const translated = translations[language];
+            if (translated) {
+                document.getElementById('content').textContent = translated.content;
+            }
+        }
+    </script>
+</body>
+</html>
