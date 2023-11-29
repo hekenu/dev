@@ -11,6 +11,7 @@
             font-family: Arial, sans-serif;
             background: url('https://i.imgur.com/eACHUWy.jpg') no-repeat center top;
             background-size: cover;
+            color: #FFF; /* Cor do texto ajustada para branco */
         }
 
         /* Estilos para a marca do LinkedIn (opcional) */
@@ -20,83 +21,111 @@
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
-            color: green;
         }
 
         /* Estilos para o título */
         h1 {
             text-align: center;
-            color: green;
             padding-top: 20px;
         }
 
-        /* Estilos para o rodapé */
-        .footer {
-            background-color: rgba(0, 0, 0, 0.05); /* Cor de fundo com opacidade de 5% */
-            color: green;
-            padding: 2px 0; /* Reduzido pela metade */
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
+        /* Estilos para o pergaminho */
+        #pergaminho {
+            background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com opacidade de 70% */
+            border: 2px solid #8B4513;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 800px; /* Aumente este valor para uma largura maior */
+            margin: 0 auto; /* Centraliza o pergaminho na página */
+            text-align: justify;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para o texto centralizado */
+        #pergaminho p {
             text-align: center;
+            margin: 0; /* Remove margens padrão para evitar espaçamento adicional */
+        }
+
+        /* Estilos para a linha especial centralizada */
+        #linha-centralizada {
+            font-size: 18px; /* Tamanho de fonte ajustado */
+            font-weight: bold; /* Negrito para destaque */
+        }
+
+        /* Estilos para o texto "Wilson_Dev" com efeito de sombra */
+        #wilson-dev {
+            font-size: 32px; /* Ajuste o tamanho da fonte conforme necessário */
             font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Efeito de sombra */
         }
 
-        /* Estilos para o seletor de idioma */
-        .language-selector {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            color: green;
-        }
+        /* Restante dos estilos permanecem inalterados */
 
-        /* Estilos para as opções de idioma */
-        .language-selector a {
-            color: green;
-            text-decoration: none;
-            font-size: 20px;
-        }
     </style>
     
 </head>
 <body>
-    <h1>*Wilson_Dev*</h1>
+    <h1><span id="wilson-dev">Wilson_Dev</span></h1>
 
     <!-- Marca do LinkedIn (opcional) -->
     <div class="linkedin-badge">
-        <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="wilson-jerônimo" data-version="v1">
-            <a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/wilson-jer%C3%B4nimo-530a31115?trk=profile-badge" style="color: red;">Linkedin: Wilson Jerônimo</a>
-        </div>
+        <!-- ... (mantenha o código da marca do LinkedIn como está) -->
+    </div>
+
+    <div id="pergaminho">
+        <h2>Manifesto Discordiano</h2>
+        <p id="linha-centralizada">
+           ___Da Sagrada Ordem do Caos...___
+        </p><br><br>
+        <p>
+            <strong>Princípio 1:</strong> A Discordância é Sagrada<br>
+            Abra os olhos, oh buscadores da confusão! A discordância é a verdadeira essência do universo. Que a dança caótica do Fnord ilumine nossos caminhos, pois na dissonância encontramos a harmonia.<br>
+<br>
+<strong>Princípio 2:</strong>: Eris, a Deusa da Discórdia<br>
+
+Celebremos Eris, a deusa brincalhona que lança maçãs douradas da discórdia entre nós. Em sua honra, riamos diante das certezas e abracemos o absurdo.<br>
+<br>
+<strong>Princípio 3:</strong> A Cabala Discordiana<br>
+
+Que a Cabala Discordiana seja nosso guia pelos caminhos tortuosos do caos. Em seus números sagrados e palavras mágicas como "Fnord," encontramos a sabedoria de rir diante da seriedade.<br>
+<br>
+<strong>Princípio 4:</strong> O Risível é Reverenciado
+
+Na risada, encontramos a verdadeira iluminação. Deixe a seriedade para os sérios; nós, os discordianos, dançamos nas margens do risível, onde a luz da comédia brilha mais intensamente.<br>
+<br>
+<strong>Princípio 5:</strong> O Caos é Ordem na Perspectiva Certa<br>
+
+No caos, encontramos a verdadeira ordem. Que os "acidentes" sejam celebrados como a dança caótica da criação, onde os patos podem muito bem ser sagrados.<br>
+<br>
+<strong>Princípio 6:</strong> A Desordem é Liberdade<br>
+
+Embarquemos na nave da desordem, onde não há destinos predeterminados. A liberdade floresce no solo fértil da desorganização, e cada passo é uma dança única.<br>
+<br>
+<strong>Princípio 7:</strong> Todos são Sumamente Illuminati<br>
+
+Não há elite, pois todos somos sumamente illuminati. Que cada um seja seu próprio iluminado, guiado pela luz de sua própria confusão.
+
+Assim é escrito nas margens da Eternidade, onde o caos é nosso mestre e o riso, nossa oração.<br>
+<br>
+<br><br>
+<strong>Hail Eris! Hail Discordia!<>
+            <!-- Restante do manifesto com <br> para pular linhas -->
+        </p>
     </div>
 
     <div class="language-selector">
-        <a href="#" onclick="changeLanguage('pt-br')">&#127463;&#127479; PT</a>
-        <a href="#" onclick="changeLanguage('en')">&#127482;&#127480; EN</a>
+        <!-- ... (mantenha o código do seletor de idioma como está) -->
     </div>
 
     <!-- Rodapé -->
     <div class="footer">
-        <p id="date" style="margin: 0 10px; color: green;"></p>
-        <span>|</span>
-        <p id="clock" style="margin: 0 10px; color: green;"></p>
+        <!-- ... (mantenha o código do rodapé como está) -->
     </div>
 
     <!-- Script para o relógio, data e idioma -->
     <script>
-        // Função para atualizar a data e hora
-        function updateTime() {
-            const now = new Date();
-            document.getElementById('date').textContent = now.toLocaleDateString();
-            document.getElementById('clock').textContent = now.toLocaleTimeString();
-        }
-
-        // Atualize a hora a cada segundo
-        setInterval(updateTime, 1000);
+        // ... (mantenha o script para a atualização de data e hora como está)
     </script>
 </body>
 </html>
