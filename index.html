@@ -14,15 +14,6 @@
             color: #FFF; /* Cor do texto ajustada para branco */
         }
 
-        /* Estilos para a marca do LinkedIn (opcional) */
-        .linkedin-badge {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-        }
-
         /* Estilos para o título */
         h1 {
             text-align: center;
@@ -30,7 +21,7 @@
         }
 
         /* Estilos para o pergaminho */
-        #pergaminho {
+        .manifesto {
             background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com opacidade de 70% */
             border: 2px solid #8B4513;
             border-radius: 10px;
@@ -42,13 +33,13 @@
         }
 
         /* Estilos para o texto centralizado */
-        #pergaminho p {
+        .manifesto p {
             text-align: center;
             margin: 0; /* Remove margens padrão para evitar espaçamento adicional */
         }
 
         /* Estilos para a linha especial centralizada */
-        #linha-centralizada {
+        .manifesto #linha-centralizada {
             font-size: 18px; /* Tamanho de fonte ajustado */
             font-weight: bold; /* Negrito para destaque */
         }
@@ -60,23 +51,37 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Efeito de sombra */
         }
 
-        /* Restante dos estilos permanecem inalterados */
+        /* Estilos para o seletor de idioma */
+        .language-selector {
+            text-align: center;
+            margin-top: 20px;
+        }
 
+        /* Estilos para os botões de idioma */
+        .language-selector button {
+            background: none;
+            border: none;
+            color: #FFF;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 0 10px;
+        }
     </style>
-    
 </head>
 <body>
     <h1><span id="wilson-dev">Wilson_Dev</span></h1>
 
-    <!-- Marca do LinkedIn (opcional) -->
-    <div class="linkedin-badge">
-        <!-- ... (mantenha o código da marca do LinkedIn como está) -->
+    <!-- Seletor de Idioma -->
+    <div class="language-selector">
+        <button onclick="changeLanguage('pt')">🇧🇷 Português</button>
+        <button onclick="changeLanguage('en')">🇺🇸 English</button>
     </div>
 
-    <div id="pergaminho">
+    <!-- Manifesto em Português -->
+    <div class="manifesto" id="manifesto-pt">
         <h2>Manifesto Discordiano</h2>
         <p id="linha-centralizada">
-           ___Da Sagrada Ordem do Caos...___
+            ___Da Sagrada Ordem do Caos...___
         </p><br><br>
         <p>
             <strong>Princípio 1:</strong> A Discordância é Sagrada<br>
@@ -110,22 +115,51 @@ Assim é escrito nas margens da Eternidade, onde o caos é nosso mestre e o riso
 <br>
 <br><br>
 <strong>Hail Eris! Hail Discordia!
-            <!-- Restante do manifesto com <br> para pular linhas -->
         </p>
     </div>
 
-    <div class="language-selector">
-        <!-- ... (mantenha o código do seletor de idioma como está) -->
+    <!-- Manifesto em Inglês -->
+    <div class="manifesto" id="manifesto-en" style="display: none;">
+        <h2>Discordian Manifest</h2>
+        <p id="linha-centralizada-en">
+
+<strong>Principle 1:</strong> Disagreement is Sacred
+Open your eyes, oh seekers of confusion! Disagreement is the true essence of the universe. May Fnord's chaotic dance light our paths, because in dissonance we find harmony.<br>
+<br>
+<strong>Principle 2:</strong> Eris, the Goddess of Discord
+Let us celebrate Eris, the playful goddess who casts golden apples of discord among us. In honor of her, let us laugh in the face of certainties and embrace the absurd.<br>
+<br>
+<strong>Principle 3:</strong> The Discordian Kabbalah
+May the Discordian Kabbalah be our guide through the tortuous paths of chaos. In its sacred numbers and magical words like "Fnord," we find the wisdom to laugh in the face of seriousness.<br>
+<br>
+<strong>Principle 4:</strong> The Laughable is Revered In laughter we find true enlightenment. Leave the seriousness to the serious; We Discordians dance on the margins of the laughable, where the light of comedy shines brightest.<br>
+<br>
+<strong>Principle 5:</strong> Chaos is Order in the Right Perspective
+In chaos, we find true order. Let "accidents" be celebrated as the chaotic dance of creation, where ducks may well be sacred.<br>
+<br>
+<strong>Principle 6:</strong> Disorder is Freedom
+Let us embark on the ship of disorder, where there are no predetermined destinations. Freedom flourishes in the fertile soil of disorganization, and each step is a unique dance.<br>
+<br>
+<strong>Principle 7:</strong> Everyone is Supremely Illuminati
+There is no elite, as we are all extremely illuminati. May everyone be their own enlightened person, guided by the light of their own confusion. So it is written on the shores of Eternity, where chaos is our master and laughter our prayer.
+        </p><br><br>
+        <p>
+
+        <p id="principles-en" style="display:none;">
+            <!-- ... (Restante do manifesto em inglês) -->
+        </p>
     </div>
 
-    <!-- Rodapé -->
-    <div class="footer">
-        <!-- ... (mantenha o código do rodapé como está) -->
-    </div>
-
-    <!-- Script para o relógio, data e idioma -->
     <script>
-        // ... (mantenha o script para a atualização de data e hora como está)
+        function changeLanguage(language) {
+            if (language === 'pt') {
+                document.getElementById('manifesto-pt').style.display = 'block';
+                document.getElementById('manifesto-en').style.display = 'none';
+            } else if (language === 'en') {
+                document.getElementById('manifesto-pt').style.display = 'none';
+                document.getElementById('manifesto-en').style.display = 'block';
+            }
+        }
     </script>
 </body>
 </html>
